@@ -1,0 +1,31 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:negotiator:20160616':
+    - errorhandler > accepts > negotiator:
+        reason: None given
+        expires: '2017-07-04T12:50:58.348Z'
+  'npm:brace-expansion:20170302':
+    - tap > nyc > rimraf > glob > minimatch > brace-expansion:
+        reason: None given
+        expires: '2017-07-04T12:50:58.348Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:marked:20150520':
+    - marked:
+        patched: '2017-06-04T12:46:54.701Z'
+  'npm:moment:20161019':
+    - moment:
+        patched: '2017-06-04T12:46:54.701Z'
+  'npm:minimatch:20160620':
+    - tap > nyc > spawn-wrap > rimraf > glob > minimatch:
+        patched: '2017-06-04T12:46:54.701Z'
+    - tap > nyc > glob > minimatch:
+        patched: '2017-06-04T12:46:54.701Z'
+    - tap > nyc > rimraf > glob > minimatch:
+        patched: '2017-06-04T12:46:54.701Z'
+    - tap > nyc > istanbul > fileset > glob > minimatch:
+        patched: '2017-06-04T12:46:54.701Z'
+    - tap > nyc > istanbul > fileset > minimatch:
+        patched: '2017-06-04T12:46:54.701Z'
